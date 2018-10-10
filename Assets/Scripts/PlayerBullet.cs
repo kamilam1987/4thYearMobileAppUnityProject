@@ -23,7 +23,7 @@ public class PlayerBullet : MonoBehaviour {
         //Update the bullets position
         transform.position = position;
 
-        //This is the right point on the screen
+        //This is the right side on the screen
         Vector3 max = Camera.main.ViewportToWorldPoint(new Vector3(1,0, 0));
 
         //Destroys bullet if it's outside the screen
