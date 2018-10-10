@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-
+    public GameObject PlayerShipBullet;//Bullets prefab
+    public GameObject BulletPosition;
     //Declare variables
     public float speed;//Speed of player ship
 
     // Update is called once per frame
     void Update()
     {
+        //On spacebar press fires the bullets
+        if (Input.GetKeyDown("space"))
+        {
+            //Instantioate bullet
+            GameObject bullet = (GameObject)Instantiate(PlayerShipBullet);
+            //Sets initial bullet position
+            bullet.transform.position = BulletPosition.transform.position;
+             
+        }
         float x = Input.GetAxisRaw("Horizontal");//The value will be -1(left), 0(no inpit), or 1(right)
         float y = Input.GetAxisRaw("Vertical");//The value will be -1(down), 0(no inpit), or 1(up)
 
