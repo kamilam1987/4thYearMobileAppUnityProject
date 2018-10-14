@@ -45,6 +45,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1238713561475884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4836885240297666}
+  - component: {fileID: 114931473355508740}
+  m_Layer: 0
+  m_Name: EnemyGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1673269074074420
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +151,19 @@ Transform:
   m_Father: {fileID: 4879127766934552}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!4 &4836885240297666
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1238713561475884}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: 0, y: 0.8695931, z: -0.019110082}
+  m_LocalScale: {x: 1.4321342, y: 1.3587393, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4879127766934552}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4856279137407586
 Transform:
   m_ObjectHideFlags: 1
@@ -155,13 +184,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038768623118588}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.091, y: 1.895, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6982586, y: 0.7359764, z: 1}
   m_Children:
   - {fileID: 4856279137407586}
   - {fileID: 4706170351047106}
   - {fileID: 4660499247898796}
   - {fileID: 4559656694603030}
+  - {fileID: 4836885240297666}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -244,6 +274,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914f61187977673408c2b23a0abd9279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114931473355508740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1238713561475884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdce29610ee9a94b876aba4f1c0b630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyBullet: {fileID: 1016921384338174, guid: 1202188a1ae49774a92696fb8fc0e66a,
+    type: 2}
 --- !u!212 &212597968610211454
 SpriteRenderer:
   m_ObjectHideFlags: 1
