@@ -9,7 +9,7 @@ public class BackgroundController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        offset = new Vector2(Time.time * scrollSpeed, 0);
+        offset = new Vector2(0,Time.time * scrollSpeed);
         GetComponent<Renderer>().material.mainTextureOffset = offset;
 		
 	}

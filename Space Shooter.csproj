@@ -321,6 +321,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundController.cs" />
     <Compile Include="Assets\Scripts\EnemyControl.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
   </ItemGroup>

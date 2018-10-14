@@ -20,16 +20,16 @@ public class EnemyControl : MonoBehaviour {
         Vector2 position = transform.position;
 
         //Enemy new position
-        position = new Vector3(position.x - speed * Time.deltaTime, position.y);
+        position = new Vector2(position.x, position.y - speed * Time.deltaTime);
 
         //Update the Enemy position
         transform.position = position;
 
-        //Left side of a screen
-        Vector3 min = Camera.main.ViewportToWorldPoint(new Vector3(-1, 0, 0));
+        //Bottom-Left side of a screen
+        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
         //Destroy Enemy if it's outside the screen
-        if (transform.position.x < min.x)
+        if (transform.position.y < min.y)
         {
             Destroy(gameObject);
 

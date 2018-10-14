@@ -37,11 +37,11 @@ public class PlayerControl : MonoBehaviour
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));//Bottom-left point on the screen
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));//Top-right point on the screen
 
-        max.x = max.x - 0.001f;//Substract the player sprite half width
-        min.x = min.x + 0.001f;//Add the player sprite half width
+        max.x = max.x - 0.5f;//Substract the player sprite half width
+        min.x = min.x + 0.5f;//Add the player sprite half width
 
-        max.y = max.y - 0.001f;//Substract the player sprite half height
-        min.y = min.y + 0.001f;//Add the player sprite half height
+        max.y = max.y - 0.85f;//Substract the player sprite half height
+        min.y = min.y + 0.85f;//Add the player sprite half height
 
         //Gets the player current position
         Vector2 pos = transform.position;
