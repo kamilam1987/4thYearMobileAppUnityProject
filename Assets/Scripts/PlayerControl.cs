@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public GameObject PlayerShipBullet;//Bullets prefab
-    public GameObject BulletPosition;
+    public GameObject BulletPosition;//Position of a bullet
+    public GameObject Explosion;//Explosion prefab
     //Declare variables
     public float speed;//Speed of player ship
 
@@ -64,10 +65,23 @@ public class PlayerControl : MonoBehaviour
         //Detects collision between player ship and enemy ship or enemy bullet
         if((collision.tag == "EnemyShipTag") || (collision.tag == "EnemyBulletTag"))
         {
+            //On collision detected turn on the explosion
+            PlayExplosion();
             //Destroy the player ship
             Destroy(gameObject);
         }
     }
+
+    //This function makes the explosion
+    void PlayExplosion()
+    {
+        GameObject explosion = (GameObject)Instantiate(Explosion);
+
+        //Sets position of the explosion
+        explosion.transform.position = transform.position;
+
+    }//End of PlayExplosion function
+
 
 
 
