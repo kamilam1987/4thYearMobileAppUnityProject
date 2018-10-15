@@ -13,6 +13,7 @@ TextureImporter:
     21300012: M484BulletCollection1_6
     21300014: M484BulletCollection1_7
     21300016: M484BulletCollection1_8
+    21300018: M484BulletCollection1_9
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -248,6 +249,20 @@ TextureImporter:
         y: 189
         width: 15
         height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: M484BulletCollection1_9
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 76
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

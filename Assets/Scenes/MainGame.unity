@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyShip: {fileID: 1038768623118588, guid: 9b0ad4d78bd4fb8459f1180365975d0a, type: 2}
+  EnemyShip2: {fileID: 1605989695066954, guid: 8e2d6d788acadea4e9e17d937441e6e6, type: 2}
 --- !u!4 &1436795239
 Transform:
   m_ObjectHideFlags: 0

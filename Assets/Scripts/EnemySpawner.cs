@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour {
 
     //Declare variables
     public GameObject EnemyShip;//Enemy prefab
+    public GameObject EnemyShip2;//Enemy prefab
     float maxSpawn = 6f;
    
 
@@ -32,7 +33,9 @@ public class EnemySpawner : MonoBehaviour {
         
         //Instantiate an Enemy
         GameObject anEnemy = (GameObject)Instantiate(EnemyShip);
+        GameObject anEnemy2 = (GameObject)Instantiate(EnemyShip2);
         anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        anEnemy2.transform.position = new Vector2(Random.Range(max.x, min.x), 5);
 
         //Schedule when to Spawn next Enemy
         ScheduleNextSpawn();
