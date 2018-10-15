@@ -36,4 +36,16 @@ public class EnemyControl : MonoBehaviour {
         }
 
     }
+
+    //This function will trigger when there is a collision of game oject
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Detects collision between enemy ship and player ship or player bullet
+        if ((collision.tag == "PlayerShipTag") || (collision.tag == "PlayerBulletTag"))
+        {
+            //Destroy the enemy ship
+            Destroy(gameObject);
+        }
+    }
+
 }

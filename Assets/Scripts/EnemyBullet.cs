@@ -56,4 +56,14 @@ public class EnemyBullet : MonoBehaviour {
             }
         }
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Detects collision between enemy bullet and player ship 
+        if ((collision.tag == "PlayerShipTag"))
+        {
+            //Destroy the enemy bullet
+            Destroy(gameObject);
+        }
+    }
 }
