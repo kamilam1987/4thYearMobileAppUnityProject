@@ -1,15 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
     public GameObject PlayerShipBullet;//Bullets prefab
     public GameObject BulletPosition;//Position of a bullet
     public GameObject Explosion;//Explosion prefab
+    
+
     //Declare variables
     public float speed;//Speed of player ship
+    public Text TextLives; //Reference to the lives UI text
+    const int MaxLives = 3;//Max player lives
+    int lives; //Current player lives
 
+    private void Start()
+    {
+        Init();
+    }
+
+    public void Init()
+    {
+        lives = MaxLives;
+        //Updates the lives UI text
+        TextLives.text = lives.ToString();
+
+        //Sets this game object to active
+        gameObject.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -67,8 +87,19 @@ public class PlayerControl : MonoBehaviour
         {
             //On collision detected turn on the explosion
             PlayExplosion();
-            //Destroy the player ship
-            Destroy(gameObject);
+
+            //Subtract one live
+            lives--;
+            //updates lives UI text
+            TextLives.text = lives.ToString();
+
+            //If player is dead
+            if(lives == 0) {
+                //Destroy the player ship
+                //Destroy(gameObject);
+                gameObject.SetActive(false);
+            }
+            
         }
     }
 
