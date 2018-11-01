@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyControl : MonoBehaviour {
 
     public GameObject Explosion; //Explosion prefab
+
+    GameObject TextScores;//References to the score text game object
     //Declare Variables
    
     float speed; //Enemy speed
@@ -13,6 +15,9 @@ public class EnemyControl : MonoBehaviour {
 	void Start () {
         //Sets the speed for Enemy
         speed = 2f;
+
+        //Gets score text
+        TextScores = GameObject.FindGameObjectWithTag ("ScoreTextTag");
 		
 	}
 	
@@ -49,6 +54,8 @@ public class EnemyControl : MonoBehaviour {
             PlayExplosion();
             //Destroy the enemy ship
             Destroy(gameObject);
+            //Adds 10 points for killing enemies
+            TextScores.GetComponent<ScoresCounter>().Score += 10;
         }
     }
 
