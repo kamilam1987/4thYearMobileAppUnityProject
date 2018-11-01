@@ -10,7 +10,6 @@ public class PlayerControl : MonoBehaviour
     public GameObject Explosion;//Explosion prefab
     public AudioClip ExplosionSound;//Sound for explosion
 
-
     //Declare variables
     public float speed;//Speed of player ship
     public Text TextLives; //Reference to the lives UI text
