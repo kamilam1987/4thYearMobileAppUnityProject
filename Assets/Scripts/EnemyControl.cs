@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyControl : MonoBehaviour {
 
     public GameObject Explosion; //Explosion prefab
+    public AudioClip ExplosionSound;//Sound for explosion
+    public AudioClip EnemySound;//Sound for enemy
 
     GameObject TextScores;//References to the score text game object
     //Declare Variables
@@ -18,8 +20,10 @@ public class EnemyControl : MonoBehaviour {
 
         //Gets score text
         TextScores = GameObject.FindGameObjectWithTag ("ScoreTextTag");
-		
-	}
+
+        //Sound effect on enemy show
+        SoundManager.Instance.Play(EnemySound);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -52,6 +56,8 @@ public class EnemyControl : MonoBehaviour {
         {
             //On collision detected turn on the explosion
             PlayExplosion();
+            //Play explosion effect
+            SoundManager.Instance.Play(ExplosionSound);
             //Destroy the enemy ship
             Destroy(gameObject);
             //Adds 10 points for killing enemies

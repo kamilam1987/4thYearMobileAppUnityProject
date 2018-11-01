@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour {
     void Start () {
         Invoke("SpawnEnemy", maxSpawn);
 
+      
         //Increases spawn rate every 30seconds
         InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
 	}
@@ -36,6 +37,7 @@ public class EnemySpawner : MonoBehaviour {
         GameObject anEnemy2 = (GameObject)Instantiate(EnemyShip2);
         anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
         anEnemy2.transform.position = new Vector2(Random.Range(max.x, min.x), 5);
+
 
         //Schedule when to Spawn next Enemy
         ScheduleNextSpawn();

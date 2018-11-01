@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9413b0fa4a9a5b94e9fd90bba5a8b43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyBullet: {fileID: 1016921384338174, guid: 1202188a1ae49774a92696fb8fc0e66a,
-    type: 2}
+  BulletSound: {fileID: 8300000, guid: 636a9ece7d9d490449812c05db4aacc6, type: 3}
 --- !u!212 &212788979792037250
 SpriteRenderer:
   m_ObjectHideFlags: 1

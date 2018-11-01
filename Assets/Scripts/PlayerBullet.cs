@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour {
 
+    public AudioClip BulletSound;
+
     //Declare variable
     float bulletSpeed;
 
 	// Use this for initialization
 	void Start () {
         bulletSpeed = 6f;
-	}
+        SoundManager.Instance.Play(BulletSound);
+    }
+
+
 	
 	// Update is called once per frame
 	void Update () {
         //Gets the bullets current position
         Vector2 position = transform.position;
+
+        
 
         //Bullet new position
         position = new Vector2(position.x, position.y + bulletSpeed * Time.deltaTime );

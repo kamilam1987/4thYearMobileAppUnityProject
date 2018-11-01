@@ -8,7 +8,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject PlayerShipBullet;//Bullets prefab
     public GameObject BulletPosition;//Position of a bullet
     public GameObject Explosion;//Explosion prefab
-    
+    public AudioClip ExplosionSound;//Sound for explosion
+
 
     //Declare variables
     public float speed;//Speed of player ship
@@ -87,7 +88,7 @@ public class PlayerControl : MonoBehaviour
         {
             //On collision detected turn on the explosion
             PlayExplosion();
-
+            SoundManager.Instance.Play(ExplosionSound);
             //Subtract one live
             lives--;
             //updates lives UI text
