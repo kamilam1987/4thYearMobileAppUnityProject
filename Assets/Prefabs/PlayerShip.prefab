@@ -166,7 +166,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.47812748, y: -4.070221}
+  m_Offset: {x: 0.47812748, y: -1.0533009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -177,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.931204, y: 40.059555}
+  m_Size: {x: 29.931204, y: 46.093395}
   m_EdgeRadius: 0
 --- !u!95 &95418966005865906
 Animator:
@@ -228,7 +228,9 @@ MonoBehaviour:
     type: 2}
   BulletPosition: {fileID: 1149334013381766}
   Explosion: {fileID: 1089612400965500, guid: 9ac7ea272f0f2d7498bdd85bb773a410, type: 2}
+  ExplosionSound: {fileID: 8300000, guid: b489cc31737498f4e958d8dd8da80ef0, type: 3}
   speed: 4
+  TextLives: {fileID: 0}
 --- !u!212 &212392040844135028
 SpriteRenderer:
   m_ObjectHideFlags: 1

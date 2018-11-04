@@ -316,6 +316,7 @@ MonoBehaviour:
   Explosion: {fileID: 1089612400965500, guid: 9ac7ea272f0f2d7498bdd85bb773a410, type: 2}
   ExplosionSound: {fileID: 8300000, guid: b489cc31737498f4e958d8dd8da80ef0, type: 3}
   EnemySound: {fileID: 8300000, guid: 7ca0a98443b15f441975685d9594f2e8, type: 3}
+  points: 20
 --- !u!212 &212143863721162792
 SpriteRenderer:
   m_ObjectHideFlags: 1

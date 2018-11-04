@@ -12,8 +12,6 @@ public class PauseButton : MonoBehaviour {
     public Sprite play;
     private int counter = 0;
 
-
-
     // Use this for initialization
     void Start () {
 
@@ -27,13 +25,16 @@ public class PauseButton : MonoBehaviour {
         {
             pauseButton.image.overrideSprite = pause1;
             Time.timeScale = 1;
+            AudioListener.pause = false;
+
         }
         else
         {
             pauseButton.image.overrideSprite = play;
             Time.timeScale = 0;
+            AudioListener.pause = true;
+
         }
     }
-    
-
+   
 }

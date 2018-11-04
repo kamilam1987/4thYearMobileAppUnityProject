@@ -2,31 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyControl : MonoBehaviour {
+public class EnemyControl : MonoBehaviour
+{
 
     public GameObject Explosion; //Explosion prefab
     public AudioClip ExplosionSound;//Sound for explosion
     public AudioClip EnemySound;//Sound for enemy
 
     GameObject TextScores;//References to the score text game object
-    //Declare Variables
-   
-    float speed; //Enemy speed
+                          //Declare Variables
 
-	// Use this for initialization
-	void Start () {
+    float speed; //Enemy speed
+    public int points;//Points for killing enemies
+
+    // Use this for initialization
+    void Start()
+    {
         //Sets the speed for Enemy
         speed = 2f;
+        
 
         //Gets score text
-        TextScores = GameObject.FindGameObjectWithTag ("ScoreTextTag");
+        TextScores = GameObject.FindGameObjectWithTag("ScoreTextTag");
 
         //Sound effect on enemy show
         SoundManager.Instance.Play(EnemySound);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         //Gets the Enemy current position
         Vector2 position = transform.position;
 
@@ -60,8 +65,8 @@ public class EnemyControl : MonoBehaviour {
             SoundManager.Instance.Play(ExplosionSound);
             //Destroy the enemy ship
             Destroy(gameObject);
-            //Adds 10 points for killing enemies
-            TextScores.GetComponent<ScoresCounter>().Score += 10;
+            //Adds points for killing enemies(sets individual for each enemy)
+            TextScores.GetComponent<ScoresCounter>().Score += points;
         }
     }
 

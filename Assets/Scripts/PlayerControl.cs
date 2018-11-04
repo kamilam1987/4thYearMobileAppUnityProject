@@ -40,7 +40,7 @@ public class PlayerControl : MonoBehaviour
             GameObject bullet = (GameObject)Instantiate(PlayerShipBullet);
             //Sets initial bullet position
             bullet.transform.position = BulletPosition.transform.position;
-             
+
         }
         float x = Input.GetAxisRaw("Horizontal");//The value will be -1(left), 0(no inpit), or 1(right)
         float y = Input.GetAxisRaw("Vertical");//The value will be -1(down), 0(no inpit), or 1(up)
@@ -83,7 +83,7 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Detects collision between player ship and enemy ship or enemy bullet
-        if((collision.tag == "EnemyShipTag") || (collision.tag == "EnemyBulletTag"))
+        if ((collision.tag == "EnemyShipTag") || (collision.tag == "EnemyBulletTag"))
         {
             //On collision detected turn on the explosion
             PlayExplosion();
@@ -94,12 +94,13 @@ public class PlayerControl : MonoBehaviour
             TextLives.text = lives.ToString();
 
             //If player is dead
-            if(lives == 0) {
+            if (lives == 0)
+            {
                 //Destroy the player ship
                 //Destroy(gameObject);
                 gameObject.SetActive(false);
             }
-            
+
         }
     }
 
@@ -117,4 +118,3 @@ public class PlayerControl : MonoBehaviour
 
 
 }
-
