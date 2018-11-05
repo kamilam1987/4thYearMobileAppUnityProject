@@ -141,7 +141,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 1206041093511340, guid: 4d6e505690ce1654e91c77c7257a738a, type: 2}
-  spawnValues: {x: 2, y: 3, z: 8}
+  spawnValues: {x: 2, y: 3, z: 0}
+  asteroidCount: 5
+  spawnWait: 10
+  startWait: 5
+  waveWait: 4
 --- !u!4 &102345331
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyControl : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class EnemyControl : MonoBehaviour
     public AudioClip EnemySound;//Sound for enemy
 
     GameObject TextScores;//References to the score text game object
-                          //Declare Variables
-
+        
+    //Declare Variables
     float speed; //Enemy speed
     public int points;//Points for killing enemies
 

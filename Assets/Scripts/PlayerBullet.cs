@@ -22,8 +22,6 @@ public class PlayerBullet : MonoBehaviour {
         //Gets the bullets current position
         Vector2 position = transform.position;
 
-        
-
         //Bullet new position
         position = new Vector2(position.x, position.y + bulletSpeed * Time.deltaTime );
         
