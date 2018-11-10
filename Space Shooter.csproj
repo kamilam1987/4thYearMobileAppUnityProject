@@ -327,6 +327,8 @@
     <Compile Include="Assets\Scripts\EnemyGun.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\ExplosionDestroyer.cs" />
+    <Compile Include="Assets\Scripts\MenuFunctionality.cs" />
+    <Compile Include="Assets\Scripts\NewGameFunctionality.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PauseButton.cs" />
     <Compile Include="Assets\Scripts\PlayerBullet.cs" />

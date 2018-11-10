@@ -9,6 +9,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject BulletPosition;//Position of a bullet
     public GameObject Explosion;//Explosion prefab
     public AudioClip ExplosionSound;//Sound for explosion
+    public GameObject EnemySpawner;
+    public GameObject AsteroidSpawner;
 
     //Declare variables
     public float speed;//Speed of player ship
@@ -99,6 +101,8 @@ public class PlayerControl : MonoBehaviour
                 //Destroy the player ship
                 //Destroy(gameObject);
                 gameObject.SetActive(false);
+                Destroy(EnemySpawner);
+                Destroy(AsteroidSpawner);
             }
 
         }
