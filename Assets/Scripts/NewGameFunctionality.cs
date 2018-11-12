@@ -15,7 +15,7 @@ public class NewGameFunctionality : MonoBehaviour {
     public void ScoreChaseButton()
     {
         //Load Score Chase mode where player has a 3 lifes 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     //On SurvivalButton click

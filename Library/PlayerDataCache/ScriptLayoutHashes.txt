@@ -1,7 +1,7 @@
 WindowsStandalone
 SceneListBegin?
-Assets/Scenes/MainGame.unity
 Assets/Scenes/MainMenu.unity
+Assets/Scenes/MainGame.unity
 Assets/Scenes/NewGameMenu.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MenuFunctionality
@@ -300,3 +300,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 324d5df0549d6c793ab3c1e56a1f9922 Assembly-CSharp.dll:.Obstacle
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.VolumeSlider

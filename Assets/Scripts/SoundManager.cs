@@ -10,7 +10,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource ExposiondMusicSource;
     public AudioSource EnemyMusicSource;
 
-
+    private AudioSource audioSrc;//Reference to Audio Source component
+    private float musicVolume = 1f;//Music volume
 
     // Random pitch adjustment range.
     public float LowPitchRange = .95f;
@@ -35,6 +36,25 @@ public class SoundManager : MonoBehaviour
 
         //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        //Assign Audo Source component to control it
+        audioSrc = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Setting volume option of Audio Source to equal to music volume
+        audioSrc.volume = musicVolume;
+    }
+    //SetVolume method takes vol value passed by slider and sets it to musicValue
+    public void SetVolume(float vol)
+    {
+        musicVolume = vol;
     }
 
     // Play a single clip through the sound effects source.
@@ -64,5 +84,4 @@ public class SoundManager : MonoBehaviour
         BackgroundMusicSource.Play();
     }
 
-    
 }
