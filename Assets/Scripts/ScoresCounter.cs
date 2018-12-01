@@ -7,30 +7,30 @@ public class ScoresCounter : MonoBehaviour {
 
     //Declare variables
     Text TextScores;
-    int score;//Scores counter
+    public static int score;//Scores counter
 
     //Score method counts the points
     public int Score
     {
         get
         {
-            return this.score;
+            return score;
         }
         set
         {
-            this.score = value;
+            score = value;
             UpdateScores();
         }
     }//End of Score method
 
     // Use this for initialization
-    void Start () {
+     void Start () {
         //Gets the text component of this game object
         TextScores = GetComponent<Text>();
 	}
 
     //This function updates the score text
-    private void UpdateScores()
+     void UpdateScores()
     {
         TextScores.text = score.ToString();
     }

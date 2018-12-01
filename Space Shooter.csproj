@@ -322,6 +322,7 @@
     <Compile Include="Assets\Scripts\AstroidSpawner.cs" />
     <Compile Include="Assets\Scripts\BackgroundController.cs" />
     <Compile Include="Assets\Scripts\DestroyAsteroidByTime.cs" />
+    <Compile Include="Assets\Scripts\EndGame.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\EnemyControl.cs" />
     <Compile Include="Assets\Scripts\EnemyGun.cs" />
