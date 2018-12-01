@@ -215,6 +215,7 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 aa8f14b745c51a87ec153c46ba07f1c2 Assembly-CSharp.dll:.PlayerBullet
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 7564d82f6a2bfa5b9ed53c77650da71c Assembly-CSharp.dll:.BackgroundController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.VolumeSlider
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -300,4 +301,3 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 324d5df0549d6c793ab3c1e56a1f9922 Assembly-CSharp.dll:.Obstacle
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.VolumeSlider

@@ -14,7 +14,7 @@ public class MenuFunctionality : MonoBehaviour {
     //On ContinueButton click
     public void ContinueButton()
     {
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
     }
 
     //On LeaderBoardButton click

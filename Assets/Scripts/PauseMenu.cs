@@ -130,5 +130,12 @@ public class PauseMenu : MonoBehaviour {
         PlayerPrefs.Save();
     }
 
+    public void Save()
+    {
+        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.Save();
+        
+    }
+
 
 }

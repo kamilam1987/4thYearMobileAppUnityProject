@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewGameMenu.unity
     guid: fc779a98f47162e47bd84d024dce2ba0
+  - enabled: 1
+    path: Assets/Scenes/Survival.unity
+    guid: 8f7eb1c551f4a8c42b0ff9f8b4d91a53
+  - enabled: 1
+    path: Assets/Scenes/TimeAttack.unity
+    guid: ea1a4c752ac4f25458a7803d2852fd0a

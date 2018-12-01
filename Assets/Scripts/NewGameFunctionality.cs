@@ -20,7 +20,7 @@ public class NewGameFunctionality : MonoBehaviour {
 
     //On SurvivalButton click
     public void SurvivalButton()
-    {
-        // SceneManager.LoadScene(0);
+    {   //Load Score Chase mode where player has only 1 life
+        SceneManager.LoadScene(3);
     }
 }
