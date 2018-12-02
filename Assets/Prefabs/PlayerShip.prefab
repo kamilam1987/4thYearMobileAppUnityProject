@@ -231,6 +231,7 @@ MonoBehaviour:
   ExplosionSound: {fileID: 8300000, guid: b489cc31737498f4e958d8dd8da80ef0, type: 3}
   EnemySpawner: {fileID: 0}
   AsteroidSpawner: {fileID: 0}
+  EndGameScreen: {fileID: 0}
   speed: 4
   TextLives: {fileID: 0}
 --- !u!212 &212392040844135028

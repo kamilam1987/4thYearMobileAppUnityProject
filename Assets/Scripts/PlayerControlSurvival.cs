@@ -11,6 +11,7 @@ public class PlayerControlSurvival : MonoBehaviour {
     public AudioClip ExplosionSound;//Sound for explosion
     public GameObject EnemySpawner;
     public GameObject AsteroidSpawner;
+    public GameObject EndGameScreen;// Game over screen
 
     //Declare variables
     public float speed;//Speed of player ship
@@ -103,6 +104,8 @@ public class PlayerControlSurvival : MonoBehaviour {
                 gameObject.SetActive(false);
                 Destroy(EnemySpawner);
                 Destroy(AsteroidSpawner);
+                EndGameScreen.SetActive(true);
+                Time.timeScale = 0;
             }
 
         }

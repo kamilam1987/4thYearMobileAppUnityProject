@@ -11,7 +11,8 @@ public class PlayerControl : MonoBehaviour
     public AudioClip ExplosionSound;//Sound for explosion
     public GameObject EnemySpawner;
     public GameObject AsteroidSpawner;
-    public GameObject EndGameScreen;
+    public GameObject EndGameScreen;//Game over screen
+
     //Declare variables
     public float speed;//Speed of player ship
     public Text TextLives; //Reference to the lives UI text
@@ -104,6 +105,7 @@ public class PlayerControl : MonoBehaviour
                 Destroy(EnemySpawner);
                 Destroy(AsteroidSpawner);
                 EndGameScreen.SetActive(true);
+                Time.timeScale = 0;
             }
 
         }
