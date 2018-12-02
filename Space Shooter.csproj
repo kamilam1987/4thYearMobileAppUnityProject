@@ -337,6 +337,7 @@
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerTime.cs" />
     <Compile Include="Assets\Scripts\PlayerControlSurvival.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
     <Compile Include="Assets\Scripts\RandomRotator.cs" />
     <Compile Include="Assets\Scripts\ScoresCounter.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
