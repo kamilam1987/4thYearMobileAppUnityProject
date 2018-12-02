@@ -25,13 +25,18 @@ public class ScoresCounter : MonoBehaviour {
 
     // Use this for initialization
      void Start () {
+        score = 0;
         //Gets the text component of this game object
         TextScores = GetComponent<Text>();
+        
 	}
 
     //This function updates the score text
      void UpdateScores()
     {
+        if (score < 0) {
+            score = 0;
+        }
         TextScores.text = score.ToString();
     }
 

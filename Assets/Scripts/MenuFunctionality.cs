@@ -8,6 +8,7 @@ public class MenuFunctionality : MonoBehaviour {
     //On NewGameButton click
     public void NewGameButton()
     {
+        Time.timeScale = 1;//Starts time
         SceneManager.LoadScene(2);
     }
 
