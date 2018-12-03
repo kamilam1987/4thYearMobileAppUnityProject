@@ -18,7 +18,7 @@ public class PlayerControl : MonoBehaviour
     public Text TextLives; //Reference to the lives UI text
     const int MaxLives = 3;//Max player lives
     int lives; //Current player lives
-
+   
     private void Start()
     {
         Init();
@@ -29,7 +29,6 @@ public class PlayerControl : MonoBehaviour
         lives = MaxLives;
         //Updates the lives UI text
         TextLives.text = lives.ToString();
-
         //Sets this game object to active
         gameObject.SetActive(true);
     }
@@ -96,6 +95,7 @@ public class PlayerControl : MonoBehaviour
             //updates lives UI text
             TextLives.text = lives.ToString();
 
+
             //If player is dead
             if (lives == 0)
             {
@@ -107,7 +107,6 @@ public class PlayerControl : MonoBehaviour
                 EndGameScreen.SetActive(true);
                 Time.timeScale = 0;
             }
-
         }
     }
 

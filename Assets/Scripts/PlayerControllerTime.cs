@@ -41,14 +41,15 @@ public class PlayerControllerTime : MonoBehaviour {
         //Gets score text
         TextScores = GameObject.FindGameObjectWithTag("ScoreTextTag");
         
-        
+
     }
     // Update is called once per frame
     void Update()
     {
-        //timeCheck();
+        
         Debug.Log(timeLeft);
-        //timeLeft += Time.deltaTime;
+        timeLeft += Time.deltaTime;
+        timeCheck();
         //On spacebar press fires the bullets
         if (Input.GetKeyDown("space"))
         {
@@ -124,10 +125,10 @@ public class PlayerControllerTime : MonoBehaviour {
     }
 
 
-    /*public void timeCheck() {
+    public void timeCheck() {
         
         //If timeout
-        if (timeLeft >= 10f)
+        if (timeLeft >= 30f)
         {
             //Destroy the player ship
             //Destroy(gameObject);
@@ -143,7 +144,7 @@ public class PlayerControllerTime : MonoBehaviour {
 
         }
         
-    }*/
+    }
 
     //This function makes the explosion
     void PlayExplosion()

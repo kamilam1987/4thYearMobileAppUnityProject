@@ -780,6 +780,11 @@ Prefab:
       propertyPath: TextLives
       value: 
       objectReference: {fileID: 523926232}
+    - target: {fileID: 114657421212112620, guid: 1cf9539f9a984fe45a17b07b49c3770c,
+        type: 2}
+      propertyPath: points
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cf9539f9a984fe45a17b07b49c3770c, type: 2}
   m_IsPrefabParent: 0
