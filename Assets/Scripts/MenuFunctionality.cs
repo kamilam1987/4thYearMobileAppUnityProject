@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuFunctionality : MonoBehaviour {
 
+    public GameObject highScore;//Display leader board
+    public GameObject menu;//Display main menu 
+
+
     void Start()
     {
         if (PlayerPrefsX.GetIntArray("HighScoreArray", 0, 10)[0] == 0) //takes 3 arguments(name, the default values has to assigned if it's not in the system and the default size of array), if the first element is 0 crate this array
@@ -23,7 +27,7 @@ public class MenuFunctionality : MonoBehaviour {
     }
 
     //On ContinueButton click
-    public void ContinueButton()
+    public void InstructionButton()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
     }
@@ -31,7 +35,11 @@ public class MenuFunctionality : MonoBehaviour {
     //On LeaderBoardButton click
     public void LeaderBoardButton()
     {
-       // SceneManager.LoadScene(0);
+        //Hide Main Menu 
+        GameObject.Find("Menu").SetActive(false);
+        //Display High Scores
+        highScore.SetActive(true);
+
     }
 
     //On CreditsButton click
@@ -45,5 +53,14 @@ public class MenuFunctionality : MonoBehaviour {
     {
         //Quit the game
         Application.Quit();
+    }
+
+    //On BackButton click
+    public void BackButton()
+    {
+        //Display Main Menu 
+        menu.SetActive(true);
+        //Hide High Scores
+        highScore.SetActive(false);
     }
 }

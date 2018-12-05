@@ -20,7 +20,6 @@ public class PlayerControllerTime : MonoBehaviour {
     const int MaxLives = 1;//Max player lives
     int lives; //Current player lives
     public float timeLeft = 0f;
-    GameObject TextScores;//References to the score text game object
     public int points;//Negative points for collision with a rock
 
     private void Start()
@@ -37,10 +36,7 @@ public class PlayerControllerTime : MonoBehaviour {
         //Sets this game object to active
         gameObject.SetActive(true);
         //Starts time counter
-        TimeCounter.GetComponent<TimeCounter>().StartTimeCounter();
-        //Gets score text
-        TextScores = GameObject.FindGameObjectWithTag("ScoreTextTag");
-        
+        TimeCounter.GetComponent<TimeCounter>().StartTimeCounter(); 
 
     }
     // Update is called once per frame
