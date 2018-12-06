@@ -140,6 +140,7 @@ MonoBehaviour:
   TimeCounter: {fileID: 938491040}
   speed: 4
   TextLives: {fileID: 34430911}
+  timeLeft: 0
   points: 20
 --- !u!114 &34430911 stripped
 MonoBehaviour:
@@ -483,6 +484,43 @@ Prefab:
         type: 2}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetFullScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765749027955102, guid: 1f5c10c9493f75f4e84b4fc29c312f01, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224457122514485536, guid: 1f5c10c9493f75f4e84b4fc29c312f01,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224457122514485536, guid: 1f5c10c9493f75f4e84b4fc29c312f01,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224355253197969822, guid: 1f5c10c9493f75f4e84b4fc29c312f01,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224355253197969822, guid: 1f5c10c9493f75f4e84b4fc29c312f01,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224355253197969822, guid: 1f5c10c9493f75f4e84b4fc29c312f01,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635333967481436, guid: 1f5c10c9493f75f4e84b4fc29c312f01, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519209551811242, guid: 1f5c10c9493f75f4e84b4fc29c312f01, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f5c10c9493f75f4e84b4fc29c312f01, type: 2}

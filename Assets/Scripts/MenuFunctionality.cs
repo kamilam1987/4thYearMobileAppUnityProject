@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuFunctionality : MonoBehaviour {
 
-    public GameObject highScore;//Display leader board
-    public GameObject menu;//Display main menu 
+    public GameObject highScore;//Refer to leaderboar panel display
+    public GameObject menu;//Refer to main menu panel display
+    public GameObject credits;//Refer to credits panel display
+    public GameObject instruction; //Refer to instruction panel display
 
 
     void Start()
@@ -29,7 +31,10 @@ public class MenuFunctionality : MonoBehaviour {
     //On ContinueButton click
     public void InstructionButton()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
+        //Hide Main Menu 
+        GameObject.Find("Menu").SetActive(false);
+        //Display High Scores
+        instruction.SetActive(true);
     }
 
     //On LeaderBoardButton click
@@ -45,7 +50,9 @@ public class MenuFunctionality : MonoBehaviour {
     //On CreditsButton click
     public void CreditsButton()
     {
-        // SceneManager.LoadScene(0);
+        GameObject.Find("Menu").SetActive(false);
+        //Display High Scores
+        credits.SetActive(true);
     }
 
     //On LeaveButton click
@@ -55,12 +62,30 @@ public class MenuFunctionality : MonoBehaviour {
         Application.Quit();
     }
 
-    //On BackButton click
+    //On Back Button click in leaderboard panel
     public void BackButton()
     {
         //Display Main Menu 
         menu.SetActive(true);
         //Hide High Scores
         highScore.SetActive(false);
+    }
+
+    //On Back Button click in credits panel
+    public void BackButtonCredits()
+    {
+        //Display Main Menu 
+        menu.SetActive(true);
+        //Hide credits board
+        credits.SetActive(false);
+    }
+
+    //On Back Button click in instruction panel
+    public void BackButtonInstruction()
+    {
+        //Display Main Menu 
+        menu.SetActive(true);
+        //Hide instruction panel
+        instruction.SetActive(false);
     }
 }

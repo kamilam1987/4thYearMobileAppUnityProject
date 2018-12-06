@@ -83,7 +83,7 @@ public class PauseMenu : MonoBehaviour {
     public void QuitButton()
     {
         //Starts time
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         //Exit game
         Application.Quit();
     }
@@ -129,13 +129,5 @@ public class PauseMenu : MonoBehaviour {
         PlayerPrefs.SetInt("fullscreen", ((isFullscreen) ? 1 : 0));
         PlayerPrefs.Save();
     }
-
-    public void Save()
-    {
-        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.Save();
-        
-    }
-
 
 }

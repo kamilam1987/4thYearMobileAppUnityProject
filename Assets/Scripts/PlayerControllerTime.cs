@@ -124,7 +124,7 @@ public class PlayerControllerTime : MonoBehaviour {
     public void timeCheck() {
         
         //If timeout
-        if (timeLeft >= 30f)
+        if (timeLeft >= 60f)
         {
             //Destroy the player ship
             //Destroy(gameObject);
