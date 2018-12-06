@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//References: https://www.youtube.com/watch?v=Om00FwLg-eg
+//This class controlls the player in survival mode
 public class PlayerControlSurvival : MonoBehaviour {
 
     public GameObject PlayerShipBullet;//Bullets prefab
@@ -21,9 +23,11 @@ public class PlayerControlSurvival : MonoBehaviour {
 
     private void Start()
     {
+        //Calls Init method at the start of game
         Init();
-    }
+    }//End Start method
 
+    //This method checks player lifes
     public void Init()
     {
         lives = MaxLives;
@@ -32,7 +36,8 @@ public class PlayerControlSurvival : MonoBehaviour {
 
         //Sets this game object to active
         gameObject.SetActive(true);
-    }
+    }//End of Init method
+
     // Update is called once per frame
     void Update()
     {
@@ -53,7 +58,8 @@ public class PlayerControlSurvival : MonoBehaviour {
 
         //Call Move function 
         Move(direction);
-    }
+    }//End of Update method
+
     //Move function sets the player position
     void Move(Vector2 direction)
     {
@@ -80,7 +86,7 @@ public class PlayerControlSurvival : MonoBehaviour {
         //Update the players position
         transform.position = pos;
 
-    }
+    }//End of Move function
 
     //This function will trigger when there is a collision of game oject
     private void OnTriggerEnter2D(Collider2D collision)
@@ -102,14 +108,13 @@ public class PlayerControlSurvival : MonoBehaviour {
                 //Destroy the player ship
                 //Destroy(gameObject);
                 gameObject.SetActive(false);
-                Destroy(EnemySpawner);
-                Destroy(AsteroidSpawner);
-                EndGameScreen.SetActive(true);
-                Time.timeScale = 0;
+                Destroy(EnemySpawner);//Destroy enemy spawner
+                Destroy(AsteroidSpawner);//Destroy asteroid spawner
+                EndGameScreen.SetActive(true);//Display game over screen
+                Time.timeScale = 0;//Stop the game 
             }
-
         }
-    }
+    }//End of OnTriggerEnter2D function
 
     //This function makes the explosion
     void PlayExplosion()
@@ -120,4 +125,4 @@ public class PlayerControlSurvival : MonoBehaviour {
         explosion.transform.position = transform.position;
 
     }//End of PlayExplosion function
-}
+}//End of PlayerControlSurvival class

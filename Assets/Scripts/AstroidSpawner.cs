@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Code adapted from: https://unity3d.com/learn/tutorials/projects/space-shooter/spawning-waves
+
+//This class is responsible for the asteroid spawner
 public class AstroidSpawner : MonoBehaviour {
 
     //Declare variables
@@ -14,10 +17,12 @@ public class AstroidSpawner : MonoBehaviour {
 
     void Start()
     {
-        //Call SpawnWave function
+        //Call SpawnWave function this ia a short pause for player to get ready
         StartCoroutine(SpawnWaves());
     }
 
+    // This method defind how offten the asteroid will spawn
+    //Coroutine function
     IEnumerator SpawnWaves()
     {
         //Waits a few seconds to start spawn
@@ -30,7 +35,8 @@ public class AstroidSpawner : MonoBehaviour {
                 Instantiate(asteroid, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds (spawnWait);
             }
+            //Create gaps between waves
             yield return new WaitForSeconds(waveWait);
-        }
-    }
-}
+        }//End while loop
+    }//End SpawnWavesfunction
+}//End AstroidSpawner class

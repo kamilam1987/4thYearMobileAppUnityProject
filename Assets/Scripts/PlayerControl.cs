@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//References: https://www.youtube.com/watch?v=Om00FwLg-eg
+//This class controls player behaviour
 public class PlayerControl : MonoBehaviour
 {
     public GameObject PlayerShipBullet;//Bullets prefab
@@ -21,9 +23,11 @@ public class PlayerControl : MonoBehaviour
    
     private void Start()
     {
+        //calls Init method
         Init();
     }
 
+    //This method shows lifes available to player
     public void Init()
     {
         lives = MaxLives;
@@ -38,11 +42,10 @@ public class PlayerControl : MonoBehaviour
         //On spacebar press fires the bullets
         if (Input.GetKeyDown("space"))
         {
-            //Instantioate bullet
+            //Instantiate bullet object
             GameObject bullet = (GameObject)Instantiate(PlayerShipBullet);
             //Sets initial bullet position
             bullet.transform.position = BulletPosition.transform.position;
-
         }
         float x = Input.GetAxisRaw("Horizontal");//The value will be -1(left), 0(no inpit), or 1(right)
         float y = Input.GetAxisRaw("Vertical");//The value will be -1(down), 0(no inpit), or 1(up)
@@ -79,7 +82,7 @@ public class PlayerControl : MonoBehaviour
         //Update the players position
         transform.position = pos;
 
-    }
+    }//End of Move function
 
     //This function will trigger when there is a collision of game oject
     private void OnTriggerEnter2D(Collider2D collision)
@@ -95,7 +98,6 @@ public class PlayerControl : MonoBehaviour
             //updates lives UI text
             TextLives.text = lives.ToString();
 
-
             //If player is dead
             if (lives == 0)
             {
@@ -108,7 +110,7 @@ public class PlayerControl : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
-    }
+    }//End of OnTriggerEnter2D function
 
     //This function makes the explosion
     void PlayExplosion()
@@ -120,7 +122,4 @@ public class PlayerControl : MonoBehaviour
 
     }//End of PlayExplosion function
 
-
-
-
-}
+}//End of PlayerControll class

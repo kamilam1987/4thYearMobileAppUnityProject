@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This class is responsable for player shooting
 public class PlayerBullet : MonoBehaviour {
 
-    public AudioClip BulletSound;
+    public AudioClip BulletSound;//Audio with shooting effect
 
     //Declare variable
-    float bulletSpeed;
+    float bulletSpeed;//Player bullet speed
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +16,6 @@ public class PlayerBullet : MonoBehaviour {
         SoundManager.Instance.Play(BulletSound);
     }
 
-
-	
 	// Update is called once per frame
 	void Update () {
         //Gets the bullets current position
@@ -38,8 +37,9 @@ public class PlayerBullet : MonoBehaviour {
 
         }
 
-    }
+    }//End of Update method
 
+    //Shoot enemy method
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Detects collision between player bullet ship and enemy ship 
@@ -49,6 +49,6 @@ public class PlayerBullet : MonoBehaviour {
             Destroy(gameObject);
         }
 
-    }
-    
-}
+    }//End of OnTriggerEnter2D function
+
+}//End PlayerBullet class

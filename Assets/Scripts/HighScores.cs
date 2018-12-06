@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This class create array to keep ten best scores from game
 public class HighScores : MonoBehaviour {
 
     //Declare variables
@@ -29,5 +30,4 @@ public class HighScores : MonoBehaviour {
             }//End of for loop
         }//End of else
     }//End of Start method
-
-}
+}//End of HighScores class

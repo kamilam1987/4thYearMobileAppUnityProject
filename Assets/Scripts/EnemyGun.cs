@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This class it's responsible for behaviour of enemy gun
 public class EnemyGun : MonoBehaviour {
 
     //Dclare variables
@@ -11,7 +12,7 @@ public class EnemyGun : MonoBehaviour {
 	void Start () {
         //Fires the enemy bullet after 1 second
         Invoke("FireEnemyBullet", 1f);
-	}
+	}//End of Start method
 	
     //Fires enemy bullet function
     void FireEnemyBullet() {
@@ -34,6 +35,5 @@ public class EnemyGun : MonoBehaviour {
             bullet.GetComponent<EnemyBullet>().SetBulletDirection(direction);
         }
 
-
     }//End FireEnemyBullet function
-}
+}//End of EnemyGun class

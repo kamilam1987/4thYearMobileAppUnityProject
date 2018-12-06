@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This class displays and sets the timer
 public class TimeCounter : MonoBehaviour {
 
     //Declare variables
@@ -45,5 +46,6 @@ public class TimeCounter : MonoBehaviour {
             //Updates the counter UI Text
             time.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
-	}
-}
+	}//End of Update method
+
+}//End of TimeCounter class

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This class is responsable for storing and counting points in a game
 public class ScoresCounter : MonoBehaviour {
 
     //Declare variables
-    Text TextScores;
+    Text TextScores;//score text
     public static int score;//Scores counter
 
     //Score method counts the points
@@ -28,8 +29,7 @@ public class ScoresCounter : MonoBehaviour {
         score = 0;
         //Gets the text component of this game object
         TextScores = GetComponent<Text>();
-        
-	}
+    }
 
     //This function updates the score text
      void UpdateScores()
@@ -39,5 +39,4 @@ public class ScoresCounter : MonoBehaviour {
         }
         TextScores.text = score.ToString();
     }
-
-}
+}//End of ScoreCounter class

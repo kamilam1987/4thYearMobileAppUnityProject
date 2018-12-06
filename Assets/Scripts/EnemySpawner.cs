@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class controls enemy spawn
 public class EnemySpawner : MonoBehaviour {
 
     //Declare variables
@@ -9,20 +10,14 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject EnemyShip2;//Enemy prefab
     float maxSpawn = 6f;
    
-
     // Use this for initialization
     void Start () {
         Invoke("SpawnEnemy", maxSpawn);
-
-      
+        
         //Increases spawn rate every 30seconds
         InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
-	}
+	}//End of Start function
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     //Function that spawns Enemy
     void SpawnEnemy()
@@ -38,19 +33,20 @@ public class EnemySpawner : MonoBehaviour {
         anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
         anEnemy2.transform.position = new Vector2(Random.Range(max.x, min.x), 5);
 
-
         //Schedule when to Spawn next Enemy
         ScheduleNextSpawn();
-    }
+    }// End of Spawnenemy function
 
+    //Creates next spawn
     void ScheduleNextSpawn() {
+
         float spawnInSeconds;
+
         if (maxSpawn > 1f) {
             //Picks number between 1 and maxSpawn
             spawnInSeconds = Random.Range(1f,maxSpawn);
         }
         else
-        
             spawnInSeconds = 1f;
         Invoke("SpawnEnemy", spawnInSeconds);
         
@@ -63,4 +59,4 @@ public class EnemySpawner : MonoBehaviour {
         if (maxSpawn == 1f)
             CancelInvoke("IncreaseSpawnRate");
     }
-}
+}//End of EnemySpawner class

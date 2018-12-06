@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//References: https://www.youtube.com/watch?v=Om00FwLg-eg
+
+//This class control player in a time attack mode
 public class PlayerControllerTime : MonoBehaviour {
 
     public GameObject PlayerShipBullet;//Bullets prefab
@@ -24,9 +27,10 @@ public class PlayerControllerTime : MonoBehaviour {
 
     private void Start()
     {
+        //Calls Init method at the start
         Init();
     }
-
+    //This function shows player lifes and strarts the timer
     public void Init()
     {
         lives = MaxLives;
@@ -38,13 +42,16 @@ public class PlayerControllerTime : MonoBehaviour {
         //Starts time counter
         TimeCounter.GetComponent<TimeCounter>().StartTimeCounter(); 
 
-    }
+    }//End of Init method
+
     // Update is called once per frame
     void Update()
     {
-        
-        Debug.Log(timeLeft);
+        //For testing
+        //Debug.Log(timeLeft);
+        //Increase time
         timeLeft += Time.deltaTime;
+        //Call method for timer
         timeCheck();
         //On spacebar press fires the bullets
         if (Input.GetKeyDown("space"))
@@ -64,7 +71,8 @@ public class PlayerControllerTime : MonoBehaviour {
         //Call Move function 
         Move(direction);
         
-    }
+    }//End of Update method
+
     //Move function sets the player position
     void Move(Vector2 direction)
     {
@@ -91,7 +99,7 @@ public class PlayerControllerTime : MonoBehaviour {
         //Update the players position
         transform.position = pos;
 
-    }
+    }//End of Move function
 
     //This function will trigger when there is a collision of game oject
     private void OnTriggerEnter2D(Collider2D collision)
@@ -107,20 +115,21 @@ public class PlayerControllerTime : MonoBehaviour {
             //updates lives UI text
             TextLives.text = lives.ToString();
            
+            //Checls available lifes
             if (lives == 0)
             {
                 //Destroy the player ship
                 //Destroy(gameObject);
                 gameObject.SetActive(false);
-                Destroy(EnemySpawner);
-                Destroy(AsteroidSpawner);
-                EndGameScreen.SetActive(true);
-                Time.timeScale = 0;
+                Destroy(EnemySpawner);//Destroy enemy spawner
+                Destroy(AsteroidSpawner);//Destroy asteroids spawner
+                EndGameScreen.SetActive(true);//Call game over screen
+                Time.timeScale = 0;//Stop game
             }
         }
-    }
+    }//End on OnTriggerEnter2D function
 
-
+    //Method for timer in a game
     public void timeCheck() {
         
         //If timeout
@@ -134,13 +143,13 @@ public class PlayerControllerTime : MonoBehaviour {
 
             //Stop the time counter
             TimeCounter.GetComponent<TimeCounter>().StopTimeCounter();
-            EndGameScreen.SetActive(true);
-            Time.timeScale = 0;
-            timeLeft = 0;
+            EndGameScreen.SetActive(true);//If time aut show game over menu screen
+            Time.timeScale = 0;//Stop the game
+            timeLeft = 0;//Set time to 0
 
         }
-        
-    }
+
+    }//End of timeCheck method
 
     //This function makes the explosion
     void PlayExplosion()
@@ -151,4 +160,4 @@ public class PlayerControllerTime : MonoBehaviour {
         explosion.transform.position = transform.position;
 
     }//End of PlayExplosion function
-}
+}//End of PlayerControllerTime class

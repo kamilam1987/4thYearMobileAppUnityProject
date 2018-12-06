@@ -4,16 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
+//References: https://www.youtube.com/watch?v=EA-tBcTxE8M
+//This class controls pause menu 
 public class PauseMenu : MonoBehaviour {
 
     //Declare variables
     public GameObject pauseObj;//Pause object
     private float tempTimeScale;//Value for time scale when pause is on(stops the game)
-    public GameObject pauseMenuHolder;
-    public GameObject optionsMenuHolder;
+    public GameObject pauseMenuHolder;//Object for pause menu
+    public GameObject optionsMenuHolder;//Object for option menu
 
-
+    //Create array to store diffrent resolution setting
     public Toggle[] resolutionToggles;
     public Toggle fullscreenToggle;
     public int[] screenWidths;
@@ -21,22 +22,21 @@ public class PauseMenu : MonoBehaviour {
 
     void Start()
     {
+        //Sets resolution current index 
         activeScreenResIndex = PlayerPrefs.GetInt("screen res index");
+        //Checks if is set to full screen
         bool isFullscreen = (PlayerPrefs.GetInt("fullscreen") == 1) ? true : false;
-
-
 
         for (int i = 0; i < resolutionToggles.Length; i++)
         {
+            //Check screen resolution index
             resolutionToggles[i].isOn = i == activeScreenResIndex;
         }
-
-        //Need to be fix
-        //fullscreenToggle.isOn = isFullscreen;
-    }
+    }//End of Start method
 
     void Update()
     {
+        //Press esc to pasue the game
         if (Input.GetKey(KeyCode.Escape))
         {
             if (Time.timeScale != 0)
@@ -97,11 +97,12 @@ public class PauseMenu : MonoBehaviour {
         optionsMenuHolder.SetActive(false);
     }
 
-
+    //Sets screen resolution method
     public void SetScreenResolution(int i)
     {
         if (resolutionToggles[i].isOn)
         {
+            //Checks the current index and sets the scrren resolution
             activeScreenResIndex = i;
             float aspectRatio = 16 / 9f;
             Screen.SetResolution(screenWidths[i], (int)(screenWidths[i] / aspectRatio), false);
@@ -109,15 +110,18 @@ public class PauseMenu : MonoBehaviour {
             PlayerPrefs.Save();
         }
     }
+    //Sets full screen method
     public void SetFullScreen(bool isFullscreen)
     {
         for (int i = 0; i < resolutionToggles.Length; i++)
         {
+            //Checks if the full screen is pressed
             resolutionToggles[i].interactable = !isFullscreen;
         }
 
         if (isFullscreen)
         {
+            //Sets resolution for full screen
             Resolution[] allResolutions = Screen.resolutions;
             Resolution maxResolution = allResolutions[allResolutions.Length - 1];
             Screen.SetResolution(maxResolution.width, maxResolution.height, true);
@@ -126,8 +130,9 @@ public class PauseMenu : MonoBehaviour {
         {
             SetScreenResolution(activeScreenResIndex);
         }
+        //Saves player setting
         PlayerPrefs.SetInt("fullscreen", ((isFullscreen) ? 1 : 0));
         PlayerPrefs.Save();
     }
 
-}
+}//End of PauseMenu class

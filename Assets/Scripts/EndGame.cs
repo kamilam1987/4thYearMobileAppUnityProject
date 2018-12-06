@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Reference : https://www.youtube.com/watch?v=xlJ4IgjiTXc
+
+//This class is responsable for displaying game over screen
 public class EndGame : MonoBehaviour {
 
     //Declare Variables
@@ -40,21 +43,20 @@ public class EndGame : MonoBehaviour {
         }//End of if
 
         PlayerPrefsX.SetIntArray("HighScoreArray", highScoresArray);//Adds result to the high score array
-    }
+    }//End of start method
     
     // On Return button click 
     public void ReturnButton()
     {
         Time.timeScale = 1;
+        //Load Main menu
         SceneManager.LoadScene(0);
     }
 
+    //On quit button press
     public void QuitButton()
-    {
+    {   //Close application
         Application.Quit();
     }
-    
-        
-    
 
-}
+}//End of EndGame class

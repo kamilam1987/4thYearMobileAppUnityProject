@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//References: https://www.youtube.com/watch?v=rQXvDDoXvLo&t=2s
+
+//This class is responsable for enemy bullet
 public class EnemyBullet : MonoBehaviour {
 
     //Declare variables
@@ -12,6 +15,7 @@ public class EnemyBullet : MonoBehaviour {
     //Sets default values in Awake function
     private void Awake()
     {
+        //Set bullet speed
         bulletSpeed = 5f;
         isReady = false;
     }
@@ -25,11 +29,6 @@ public class EnemyBullet : MonoBehaviour {
         isReady = true;
     }//End of SetBulletDirection function
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
         if (isReady)
@@ -55,8 +54,9 @@ public class EnemyBullet : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
-	}
+	}// End of Update function
 
+    //This function is called on collision between enemy bullet and player ship
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Detects collision between enemy bullet and player ship 
@@ -65,5 +65,5 @@ public class EnemyBullet : MonoBehaviour {
             //Destroy the enemy bullet
             Destroy(gameObject);
         }
-    }
-}
+    }// End fo OnTriggerEnter2D function
+}//End of EnnemyBullet class

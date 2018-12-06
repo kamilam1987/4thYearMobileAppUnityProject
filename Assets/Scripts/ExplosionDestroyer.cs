@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This class destroy explossion
 public class ExplosionDestroyer : MonoBehaviour {
 
     //Explosion gets destroyed after animation
@@ -9,4 +10,4 @@ public class ExplosionDestroyer : MonoBehaviour {
     {
         Destroy(gameObject);
     }//End of DestroyGameObject function
-}
+}//End of ExplosionDestroyer class

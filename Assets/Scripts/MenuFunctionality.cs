@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//This class controls main menu
 public class MenuFunctionality : MonoBehaviour {
 
     public GameObject highScore;//Refer to leaderboar panel display
     public GameObject menu;//Refer to main menu panel display
     public GameObject credits;//Refer to credits panel display
     public GameObject instruction; //Refer to instruction panel display
-
 
     void Start()
     {
@@ -25,6 +25,7 @@ public class MenuFunctionality : MonoBehaviour {
     public void NewGameButton()
     {
         Time.timeScale = 1;//Starts time
+        //Load scene with new game menu
         SceneManager.LoadScene(2);
     }
 
@@ -88,4 +89,4 @@ public class MenuFunctionality : MonoBehaviour {
         //Hide instruction panel
         instruction.SetActive(false);
     }
-}
+}//End MenuFunctionality class
